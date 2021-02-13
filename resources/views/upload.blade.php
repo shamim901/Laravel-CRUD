@@ -18,20 +18,32 @@
     <![endif]-->
   </head>
   <body>
-  	<div class="container">
+  	<div class="container" style="margin-top: 20px">
     <form>
-	  <div class="form-group">
+	 <div class="form-group">
 	    <label for="exampleInputEmail1">Email address</label>
 	    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
 	    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
 	  </div>
-	  <div class="form-group">
+	  <div class="form-row">
 	    <label for="exampleInputPassword1">Password</label>
 	    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
 	  </div>
-	  <div class="form-check">
+	  <div class="form-check form-check-inline">
+		  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+		  <label class="form-check-label" for="inlineCheckbox1">1</label>
+		</div>
+		<div class="form-check form-check-inline">
+		  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+		  <label class="form-check-label" for="inlineCheckbox2">2</label>
+		</div> 
+	  <div class="form-group">
+    	<label for="exampleFormControlFile1">Attachment</label>
+    	<input type="file" class="form-control-file" id="exampleFormControlFile1">
+  	  </div>
+  	   <div class="form-check">
 	    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-	    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+	    <label class="form-check-label" for="exampleCheck1">Are You Agree with Term and Condition!!!</label>
 	  </div>
 	  <button type="submit" class="btn btn-primary">Submit</button>
 	</form>
