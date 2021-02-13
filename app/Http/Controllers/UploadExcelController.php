@@ -7,14 +7,21 @@ use Illuminate\Http\Request;
 
 class UploadExcelController extends Controller
 {
-   function upload(){
+   
+   /** 
+	** file upload
+   **/
+   	function upload(){
+
        return view('upload');
-   }
+   
+   	}
 
-   function uploadExcel(){
-       Excel::import(new User(), request()->file('select'));
+   function uploadExcel() 
+   {
 
-    //   Excel::import(new UsersImport, 'users.xlsx');
-       return redirect('/')->with('success', 'All good!');
+   Excel::import(new User(), request()->file('select'));
+
+   return redirect('/')->with('success', 'All good!');
    }
 }

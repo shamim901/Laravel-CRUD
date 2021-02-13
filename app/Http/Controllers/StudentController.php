@@ -8,16 +8,27 @@ use Illuminate\Support\Facades\DB;
 
 class StudentController extends Controller
 {
+  /** 
+  ** Data Save
+  **/
    public function record(Request $request){
-       $student = new Student();
+       
+     $student = new Student();
 
-       $student->name = $request->input('name');
-       $student->email = $request->input('email');
-       $student->password = $request->input('password');
+     $student->name = $request->input('name');
+     $student->email = $request->input('email');
+     $student->password = $request->input('password');
 
-       $student->save();
+     $student->save();
    }
-   public function retriveData(){
+
+
+   /** 
+    ** data retrive function
+   */
+   public function retriveData() 
+   {
+
        $data = DB::table("users")->get();
 
        $value = DB::table('students')->get();
@@ -28,9 +39,6 @@ class StudentController extends Controller
 
        $pluck = DB::table('students')->pluck('password');
 
-       dd($pluck);
-
-//       dd($data);
        return view("query",
            ['data' => $data],
            ['value'=>$value]
